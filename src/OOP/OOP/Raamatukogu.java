@@ -25,9 +25,9 @@ public class Raamatukogu {
         String[] vaste2 = raamat.otsiEsimeseTaheJargi("s");
         System.out.println(Arrays.toString(vaste2));
 
-        raamat.eemaldaSona(vaste2[0]);
+       // raamat.eemaldaSona(vaste2[0]);
 
-        raamat.misKeelesRaamatOn();
+        //raamat.misKeelesRaamatOn();
 
     }
 }

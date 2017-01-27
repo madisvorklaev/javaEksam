@@ -21,12 +21,32 @@ import java.util.Arrays;
  */
 public class KaguNurk {
 
-    // Lihtsalt abiline meetod, et maatriksit välja printida
-    private static void printMaatriks(int[][] laud) {
-        for (int i = 0; i < laud.length; i++) {
-            System.out.println(Arrays.toString(laud[i]));
+    public static void main(String[] args) {
+
+        int[][] laud = new int[9][9];
+
+        for (int i = 0; i < 9 ; i++) {
+            for (int j = 0; j < 9 ; j++) {
+                laud[i][j] = 9-j;
+          }
+
         }
-        System.out.println("");
+    printMaatriks(laud);
     }
 
-}
+
+
+
+    // Lihtsalt abiline meetod, et maatriksit välja printida
+        private static void printMaatriks(int[][] laud) {
+            for (int i = 0; i < laud.length; i++) {
+                System.out.println(Arrays.toString(laud[i]));
+            }
+            System.out.println("");
+        }
+
+
+    }
+
+
+
