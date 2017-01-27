@@ -14,7 +14,7 @@ public class Suusailm {
         int teisesRohekm = 0;
 
         for (int i = 0; i < kraadid1.length; i++) {
-            if (kraadid1[i] >= 0) {
+            if (kraadid1[i] > 0) {
                 paaris += 1;
             }
             else {
@@ -25,7 +25,7 @@ public class Suusailm {
         paaris = 0;
         paaritu = 0;
         for (int i = 0; i < kraadid2.length; i++) {
-            if (kraadid2[i] >= 0) {
+            if (kraadid2[i] > 0) {
                 paaris += 1;
             }
             else {

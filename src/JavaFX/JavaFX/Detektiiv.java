@@ -27,24 +27,24 @@ public class Detektiiv {
             primaryStage.setScene(scene);
 
             Circle ring1 = new Circle(30);
-            double x = (double) Math.random() * 220;
-            double y = (double) Math.random() * 220;
+            /*double x = Math.random() * 470-250;
+            double y = Math.random() * 470-250;
             System.out.println(x + "  " + y);
             ring1.setTranslateX(x);
-            ring1.setTranslateY(y);
+            ring1.setTranslateY(y); */
             ring1.setFill(Color.WHITE);
 
             Circle ring2 = new Circle(30);
-            double a = (double) Math.random() * 220;
-            double b = (double) Math.random() * 220;
+            double a = (double) Math.random() * 470-250;
+            double b = (double) Math.random() * 470-250;
             System.out.println(a + "  " + b);
             ring2.setTranslateX(a);
             ring2.setTranslateY(b);
             ring2.setFill(Color.WHITE);
 
             Circle ring3 = new Circle(30);
-            double c = (double) Math.random() * 220;
-            double d = (double) Math.random() * 220;
+            double c = (double) Math.random() * 470-250;
+            double d = (double) Math.random() * 470-250;
             System.out.println(c + "  " + d);
             ring3.setTranslateX(c);
             ring3.setTranslateY(d);
@@ -60,6 +60,7 @@ public class Detektiiv {
             ring1.setOnMouseEntered(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
+                    ring1.setVisible(true);
                     ring1.setFill(Color.DARKMAGENTA);
                 }
             });
@@ -67,6 +68,7 @@ public class Detektiiv {
             ring2.setOnMouseEntered(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
+                    ring2.setVisible(true);
                     ring2.setFill(Color.ROYALBLUE);
                 }
             });
@@ -74,6 +76,7 @@ public class Detektiiv {
             ring3.setOnMouseEntered(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
+                    ring3.setVisible(true);
                     ring3.setFill(Color.MAROON);
                 }
             });

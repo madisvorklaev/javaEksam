@@ -55,8 +55,8 @@ public class FooridUnenaos{
     public void generateCircles(){
         for (int i = 0; i < 600 ; i++) {
             radius = 10;
-            xCoordinate = (int) (Math.random() * 220);
-            yCoordinate = (int) (Math.random() * 220);
+            xCoordinate = (int) (Math.random() * 490-250);
+            yCoordinate = (int) (Math.random() * 490-250);
             color = Color.RED;
             Circle circle = new Circle(radius);
             circle.setTranslateX(xCoordinate);

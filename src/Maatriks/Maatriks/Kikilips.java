@@ -20,19 +20,27 @@ import java.util.Arrays;
  */
 public class Kikilips {
     public static void main(String[] args) {
-        String [][] maatriks = new String[9][9];
+        int [][] maatriks = new int[9][9];
 
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                if (i+j<9 && i-j>=0) {
-                    maatriks[i][j] = "0";
-                } else if (i+j>=8 && i-j<=0) {
-                    maatriks[i][j] = "0";
-                } else {
-                    maatriks[i][j] = " ";
+        for (int j = 0; j < 9; j++) {
+            for (int i = 0; i < 9; i++) {
+                if ((j<=i && j <=(maatriks[j].length - i - 1)) || !(j<=(i - 1) || j <=maatriks[j].length - i - 2)) {
+                    maatriks[j][i] = 1;
                 }
             }
-            System.out.println(Arrays.toString(maatriks[i]));
         }
+        printM(maatriks);
     }
+static void printM(int[][] m){
+
+        for(int j =0; j<m.length; j++){
+            for(int i=0; i<m[j].length;i++){
+                System.out.print(m[j][i]);
+            }
+            System.out.println();
+        }
+
 }
+}
+
+
