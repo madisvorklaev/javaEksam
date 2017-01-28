@@ -61,7 +61,6 @@ public class FooridUnenaos{
             circle.setTranslateX(xCoordinate);
             circle.setTranslateY(yCoordinate);
             circle.setFill(color);
-            circle.setId("ring");
 
             circle.setOnMouseEntered(event -> {
                 circle.setFill(Color.GREEN);
