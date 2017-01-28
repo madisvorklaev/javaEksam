@@ -25,19 +25,19 @@ public class KuulusNumber {
         }
     }
         for (int i = 0; i < numbers.size(); i++) {
-            counter = 1;
+            counter = 1; //sest 1 kord esineb seda liiget ju igal juhul
             int a = numbers.get(i);
-            for (int j = i+1; j < numbers.size() ; j++) {
+            for (int j = i+1; j < numbers.size() ; j++) { //i+1 korral jäetakse juba uuritud liikmed saatuse hooleks ja neid ei torgita enam.
                 if (numbers.get(j) == a){
                     counter +=1;
                 }
-                map.put(a, counter);
+                map.put(counter, a); //suurim numbrite summa jääb viimaseks võtmeks. Väiksema summa korral kirjutatakse eelmine võti ja väärtus lihtsalt üle
             }
-
         }
-        int max = Collections.max();
-        int maxValue = Collections.max(map.values());
+        Comparable maxKey = Collections.max(map.keySet()); // mis oli kõige suurem counteri tulemus
+        int vastus = (int) map.get(maxKey); // küsi mapist keyle vastav väärtus
         System.out.println(numbers);
         System.out.println(map);
+        System.out.println("Kõige rohkem esines number " + vastus +".");
 
 }}
