@@ -38,10 +38,10 @@ public class FooridUnenaos{
         primaryStage.show();
 
         generateCircles();
-        mouse();
+       // mouse();
     }
 
-
+/*
     private void mouse(){
         stack.setOnMouseMoved(event ->  {
             Circle circle = (Circle) event.getTarget();
@@ -50,8 +50,7 @@ public class FooridUnenaos{
             }
             });
     }
-
-
+    */
     public void generateCircles(){
         for (int i = 0; i < 600 ; i++) {
             radius = 10;
@@ -63,6 +62,11 @@ public class FooridUnenaos{
             circle.setTranslateY(yCoordinate);
             circle.setFill(color);
             circle.setId("ring");
+
+            circle.setOnMouseEntered(event -> {
+                circle.setFill(Color.GREEN);
+            });
+
             stack.getChildren().add(circle);
 
         }
