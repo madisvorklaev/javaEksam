@@ -3,36 +3,43 @@ package OOP;
 import java.util.ArrayList;
 
 /**
- * Created by madis on 22.01.2017.
+ * Created by madis on 28.01.2017.
  */
 public class Sonaraamat {
-    String raamatuKeel;
-    String sona;
-    String vaste[];
-    String taht;
-    ArrayList sonad = new ArrayList();
 
+    String language;
+    ArrayList <String> eestiKeel = new ArrayList();
 
-    public Sonaraamat(String raamatuKeel){
-        this.raamatuKeel = raamatuKeel;
+    public Sonaraamat(String raamatuKeel) {
+        language = raamatuKeel;
     }
 
-    public void sisestaSona(String sona){
-        this.sona = sona;
-        sonad.add(sona);
-    }
-
-    public String[] otsiEsimeseTaheJargi(String taht){
-        String otsitav;
-        for (int i = 0; i <sonad.size() ; i++) {
-            otsitav = (String) sonad.get(i);
-          String otsitavTaht = String.valueOf(otsitav.charAt(0));
-            if (otsitavTaht.equals(taht)){
-                vaste[0] = otsitav;
+    public void sisestaSona(String input){
+        eestiKeel.add(input);
             }
+
+    public String[] otsiEsimeseTaheJargi(String letter){
+        char firstLetter = letter.charAt(0);
+        ArrayList sobivadVasted = new ArrayList();
+        for (int i = 0; i < eestiKeel.size() ; i++) {
+            if (eestiKeel.get(i).charAt(0) == firstLetter){
+                sobivadVasted.add(eestiKeel.get(i));
+            }}
+
+        String[] vasted = new String[sobivadVasted.size()];
+        for (int i = 0; i < sobivadVasted.size() ; i++) {
+            vasted[i] = (String) sobivadVasted.get(i);
         }
-        return vaste;
+        return vasted ;
     }
 
-
+    public void eemaldaSona(String word){
+        eestiKeel.remove(word);
+        System.out.println(eestiKeel);
     }
+
+    public void misKeelesRaamatOn(){
+        System.out.println(language);
+    }
+}
+
