@@ -16,7 +16,6 @@ public class PixelChaser {
     }
 
     Pane pane;
-    Rectangle rec;
 
     private void startStage() {
 

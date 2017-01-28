@@ -12,12 +12,12 @@ public class Pastakas {
     }
 
     public void kirjuta(String tekst){
-        while (tinti > 0){
+      //  while (tinti > 0){
         String noCaps = tekst.replace(" ", "");
         if (tinti >= noCaps.length()){
             System.out.println(tekst);
             tinti = tinti-noCaps.length();
-            prindiPaljuTintiAlles();
+           // prindiPaljuTintiAlles();
         }
         else{
             String almostOutOfInk = tekst.substring(0, tinti);
@@ -28,9 +28,9 @@ public class Pastakas {
                 }
             }
             System.out.println(tekst.substring(0, tinti));
-            tinti = 0;
+        //    tinti = 0;
         }}
-        }
+        //}
 
 
     public void prindiPaljuTintiAlles(){
